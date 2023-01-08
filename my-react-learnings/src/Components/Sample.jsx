@@ -41,16 +41,16 @@ try {
 }
 
   return  loading ? (<h2>Loading...</h2>) :  (
-  <div id="main">
+  <div id="main" style={{border:'1px solid blue'}}>
  
-   <div>
+   <div style={{border:'1px solid teal'}}>
    <h2>Posts</h2>
    {/* <button onClick={addhandlefetch}>ADD</button> */}
     
   
    <ul>
 
- {data.map((el)=>(<li>{el.title}</li>))}
+ {data.map((el)=>(<li style={{border:'2px solid pink'}}> {el.id}   {':'} {el.title}</li>))}
 
    </ul>
  <button onClick={()=>handlepageji(-1)} disabled={page === 1}>Previous</button>
