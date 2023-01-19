@@ -12,10 +12,14 @@ const handleInputText=(e)=>{
 
 const handleButton=()=>{
 
-
-
-
+const newArr={
+  title:text,
+  status:false,
 }
+
+setTodos([...todos,newArr])
+}
+console.log(todos)
   return (
     <div className="App">
    
@@ -28,6 +32,16 @@ const handleButton=()=>{
 
    <button onClick={handleButton}>Add</button>
 </>
+
+<ul>
+
+{todos.map((el)=>(<li>{el.title}</li>))}
+
+</ul>
+
+
+
+
     </div>
   );
 }
