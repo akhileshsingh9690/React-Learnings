@@ -4,10 +4,17 @@ import './App.css';
 function App() {
 
   const [text , setText]=React.useState("")
-
+ const [todos,setTodos]=React.useState([])
  
 const handleInputText=(e)=>{
   setText(e.target.value)
+}
+
+const handleButton=()=>{
+
+
+
+
 }
   return (
     <div className="App">
@@ -18,6 +25,8 @@ const handleInputText=(e)=>{
    <input value={text} placeholder="Add Todo here"
    onChange={handleInputText}
    />
+
+   <button onClick={handleButton}>Add</button>
 </>
     </div>
   );
